@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-from dog import Dog
+from lib.dog import Dog
 
 class TestDog:
     '''Dog in dog.py'''
@@ -16,14 +15,14 @@ class TestInit:
     def test_saves_self_name(self):
         '''takes a name as an argument and saves it to self.name'''
         fido = Dog("Fido")
-        assert(fido.name == "Fido")
+        assert fido.name == "Fido"
 
     def test_saves_self_breed(self):
         '''takes a breed as an argument and saves it to self.breed'''
         fido = Dog("Fido", "Dalmatian")
-        assert(fido.breed == "Dalmatian")
+        assert fido.breed == "Dalmatian"
 
     def test_default_breed(self):
-        '''sets self.breed = "Mutt" when no breed specified'''
+        '''sets self.breed = "Mutt" when no breed is specified'''
         fido = Dog("Fido")
-        assert(fido.breed == "Mutt")
+        assert fido.breed == "Mutt"
