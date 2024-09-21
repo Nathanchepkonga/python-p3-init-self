@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-from person import Person
+from lib.person import Person
 
 class TestPerson:
     '''Person in person.py'''
@@ -16,4 +15,4 @@ class TestInit:
     def test_saves_self_name(self):
         '''takes a name as an argument and saves it to self.name'''
         guido = Person("Guido")
-        assert(guido.name == "Guido")
+        assert guido.name == "Guido"
